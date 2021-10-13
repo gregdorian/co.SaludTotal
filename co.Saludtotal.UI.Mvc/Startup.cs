@@ -45,6 +45,11 @@ namespace co.Saludtotal.UI.Mvc
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "Requerimientos",
+                    pattern: "Requerimientos/Index",
+                   defaults: new { controller = "Requerimientos", action = "Index" });/* "{controller=}/{action=Index}/{id?}");*/
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });

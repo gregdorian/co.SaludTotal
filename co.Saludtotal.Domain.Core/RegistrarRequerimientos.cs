@@ -15,12 +15,12 @@ namespace co.Saludtotal.Domain.Core
         public static List<DataRow> ConsultarRequerimiento()
         {
 
-            DataTable dtConsultaFactura;
-            dtConsultaFactura = RequerimientoPersistence.GetAllRequerimientos();
+            DataTable dtRequerimientos;
+            dtRequerimientos = RequerimientoPersistence.GetAllRequerimientos();
 
-            List<DataRow> lstClientes = dtConsultaFactura.AsEnumerable().ToList();
+            List<DataRow> lstRequerimientos = dtRequerimientos.AsEnumerable().ToList();
 
-            return lstClientes;
+            return lstRequerimientos;
         }
 
 

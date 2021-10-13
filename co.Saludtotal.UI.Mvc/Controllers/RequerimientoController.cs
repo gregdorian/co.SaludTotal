@@ -13,9 +13,10 @@ namespace co.Saludtotal.UI.Mvc.Controllers
     {
         RequerimientosFac requerimientosFac = new RequerimientosFac();
         // GET: RequerimientoController
+        [Route("Requerimientos/Index")]
         public ActionResult Index()
         {
-            return View();
+            return View(requerimientosFac.GetAll());
         }
 
         // GET: RequerimientoController/Details/5

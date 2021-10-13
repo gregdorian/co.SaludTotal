@@ -9,7 +9,7 @@ namespace co.Saludtotal.Infrastructure.Data
     internal class Conexion
     {
 
-        private static readonly string cadenaConexion = ConfigurationManager.ConnectionStrings["saludTConn"].ConnectionString;
+        private static readonly string cadenaConexion = "Server=(localdb)\\MSSQLLocalDB;Database=PruebaTecnicaGermanLopezR;Trusted_Connection=True;";// ConfigurationManager.ConnectionStrings["saludTConn"].ConnectionString;
         private static SqlConnection conexion = new SqlConnection(cadenaConexion);
 
 
