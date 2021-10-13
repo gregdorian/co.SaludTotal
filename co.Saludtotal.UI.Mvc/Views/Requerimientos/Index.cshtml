@@ -1,0 +1,53 @@
+﻿@model IEnumerable<co.Saludtotal.Domain.Entities.Requerimiento >
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreRequerimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlcanceRequerimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaSolicitud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AplicativoID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreRequerimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlcanceRequerimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaSolicitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AplicativoID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RequerimientoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RequerimientoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RequerimientoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
