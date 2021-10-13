@@ -16,7 +16,7 @@ namespace co.Saludtotal.Aplication
 
         }
 
-        public List<DataRow> GetAll()
+        public List<Requerimiento> GetAll()
         {
 
             try

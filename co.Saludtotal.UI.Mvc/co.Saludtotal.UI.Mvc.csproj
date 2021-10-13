@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Requerimientos\" />
+    <Folder Include="Views\Requerimiento\" />
   </ItemGroup>
 
 </Project>

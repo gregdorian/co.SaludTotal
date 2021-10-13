@@ -12,13 +12,13 @@ namespace co.Saludtotal.Domain.Core
     public static class RegistrarRequerimientos
     {
 
-        public static List<DataRow> ConsultarRequerimiento()
+        public static List<Requerimiento> ConsultarRequerimiento()
         {
 
             DataTable dtRequerimientos;
             dtRequerimientos = RequerimientoPersistence.GetAllRequerimientos();
 
-            List<DataRow> lstRequerimientos = dtRequerimientos.AsEnumerable().ToList();
+            List<Requerimiento> lstRequerimientos = ConvertUtility.ConvertDataTable<Requerimiento>(dtRequerimientos);
 
             return lstRequerimientos;
         }
