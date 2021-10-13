@@ -36,16 +36,25 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Aplicativo](
+
 	[AplicativoID] [int] IDENTITY(1,1) NOT NULL,
+
 	[DesarrolladorID] [int] NULL,
+
 	[NombreAplicativo] [nvarchar](40) NOT NULL,
+
 	[DiasDesarrollo] [int] NULL,
+
 	[FechaDesarrollo] [smalldatetime] NULL,
+
 	[FechaPruebas] [smalldatetime] NULL,
+
 PRIMARY KEY CLUSTERED 
 (
 	[AplicativoID] ASC
+
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
 ) ON [PRIMARY]
 
 GO
@@ -60,9 +69,13 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Desarrollador](
+
 	[DesarrolladorID] [int] IDENTITY(1,1) NOT NULL,
+
 	[NombreDesarrollador] [nvarchar](40) NOT NULL,
+
 PRIMARY KEY CLUSTERED 
+
 (
 	[DesarrolladorID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -80,15 +93,23 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Requerimiento](
+
 	[RequerimientoID] [int] IDENTITY(1,1) NOT NULL,
+	
 	[NombreRequerimiento] [nvarchar](40) NOT NULL,
+	
 	[AlcanceRequerimiento] [nvarchar](10) NULL,
+	
 	[FechaSolicitud] [smalldatetime] NULL,
+	
 	[AplicativoID] [int] NULL,
+	
 PRIMARY KEY CLUSTERED 
 (
 	[RequerimientoID] ASC
+	
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
 ) ON [PRIMARY]
 
 GO
