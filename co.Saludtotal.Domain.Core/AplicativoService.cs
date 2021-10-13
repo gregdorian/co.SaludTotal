@@ -9,26 +9,25 @@ using System.Threading.Tasks;
 
 namespace co.Saludtotal.Domain.Core
 {
-    public static class RegistrarRequerimientos
+    public class AplicativoService
     {
-
-        public static List<Requerimiento> ConsultarRequerimiento()
+        public static List<Aplicativo> ConsultarAplicativo()
         {
 
-            DataTable dtRequerimientos;
-            dtRequerimientos = RequerimientoPersistence.GetAllRequerimientos();
+            DataTable dtAplicativo;
+            dtAplicativo = AplicativoPersistence.GetAllAplicativo();
 
-            List<Requerimiento> lstRequerimientos = ConvertUtility.ConvertDataTable<Requerimiento>(dtRequerimientos);
+            List<Aplicativo> lstAplicativo = ConvertUtility.ConvertDataTable<Aplicativo>(dtAplicativo);
 
-            return lstRequerimientos;
+            return lstAplicativo;
         }
 
-        public static bool RegistrarRequerimiento(Requerimiento oRequerimiento)
+        public static bool RegistrarAplicativo(Aplicativo oAplicativo)
         {
             try
             {
 
-                RequerimientoPersistence.CreateRequerimiento(oRequerimiento);
+                AplicativoPersistence.CreateAplicativo(oAplicativo);
                 return true;
             }
             catch (Exception ex)
@@ -39,12 +38,12 @@ namespace co.Saludtotal.Domain.Core
 
         }
 
-        public static bool ActualizarRequerimiento(Requerimiento oRequerimiento)
+        public static bool ActualizarAplicativo(Aplicativo oAplicativo)
         {
             try
             {
 
-                RequerimientoPersistence.UpdateRequerimiento(oRequerimiento);
+                AplicativoPersistence.UpdateAplicativo(oAplicativo);
                 return true;
             }
             catch (Exception ex)
@@ -55,12 +54,12 @@ namespace co.Saludtotal.Domain.Core
 
         }
 
-        public static bool BorrarRequerimiento(Requerimiento oRequerimiento)
+        public static bool BorrarAplicativo(Aplicativo oAplicativo)
         {
             try
             {
 
-                RequerimientoPersistence.DeleteRequerimiento(oRequerimiento);
+                AplicativoPersistence.DeleteAplicativo(oAplicativo);
                 return true;
             }
             catch (Exception ex)
@@ -70,7 +69,6 @@ namespace co.Saludtotal.Domain.Core
             }
 
         }
-
 
     }
 }

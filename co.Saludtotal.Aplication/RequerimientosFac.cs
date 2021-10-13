@@ -71,5 +71,19 @@ namespace co.Saludtotal.Aplication
                 throw ex;
             }
         }
+
+        public List<Aplicativo> GetAplicativo()
+        {
+            try
+            {
+                return  AplicativoService.ConsultarAplicativo();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
