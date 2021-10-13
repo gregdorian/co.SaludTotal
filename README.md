@@ -22,12 +22,19 @@ se provee de los scripts tanto de creación Tablas como los StoredPRocedures del
 
 
 USE [PruebaTecnicaGermanLopezR]
+
 GO
+
 /****** Object:  Table [dbo].[Aplicativo]    Script Date: 13/10/2021 3:23:40 p. m. ******/
+
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
+
 CREATE TABLE [dbo].[Aplicativo](
 	[AplicativoID] [int] IDENTITY(1,1) NOT NULL,
 	[DesarrolladorID] [int] NULL,
